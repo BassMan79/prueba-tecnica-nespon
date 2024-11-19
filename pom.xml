@@ -56,6 +56,13 @@
             <version>5.9.1</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- Allure Report -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-cucumber7-jvm</artifactId>
+            <version>2.29.0</version>
+        </dependency>
     </dependencies>
 
 
@@ -71,6 +78,12 @@
                         <include>**/*Test.java</include>
                     </includes>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.15.2</version>
             </plugin>
         </plugins>
     </build>
