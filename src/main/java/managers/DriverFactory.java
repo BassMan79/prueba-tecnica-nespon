@@ -10,7 +10,7 @@ public class DriverFactory {
 
     public static WebDriver getDriver() throws Exception {
         if (driver == null) {
-            // Configuración automática del WebDriver para Chrome
+            // Configuración automática del WebDriver para Chrome con bonigarcia webDriverManager
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             driver.get(ConfigFileReader.getApplicationUrl());
