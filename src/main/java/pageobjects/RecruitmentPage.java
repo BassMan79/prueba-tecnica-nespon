@@ -14,7 +14,6 @@ public class RecruitmentPage extends PageBase{
     private final By succesButtonXpath = By.xpath("//button[@class='oxd-button oxd-button--medium oxd-button--success']");
     private final By buttonAddXpath = By.xpath("//button[text() = ' Add ']");
     private final By buttonSaveXpath = By.xpath("//button[text() = ' Save ']");
-    private final By buttonShortlistXpath = By.xpath("//button[text() = ' Shortlist ']");
     private final By firstNameInputXpath = By.xpath("//input[@name='firstName']");
     private final By middleNameInputXpath = By.xpath("//input[@name='middleName']");
     private final By lastNameInputXpath = By.xpath("//input[@name='lastName']");
@@ -26,12 +25,16 @@ public class RecruitmentPage extends PageBase{
     }
 
     public void addNewEmployee() throws Exception {
+        startProcessAddNewEmployee();
+        fillEmployeeForm();
+        shortlistCandidate();
+    }
+
+    public void startProcessAddNewEmployee() throws Exception {
         waitUntilElementIsVisible(recruitmentSideBarXpath);
         clickOnClickableElement(recruitmentSideBarXpath);
         waitUntilElementIsVisible(buttonAddXpath);
         clickOnClickableElement(buttonAddXpath);
-        fillEmployeeForm();
-        shortlistCandidate();
     }
 
     public void fillEmployeeForm() throws Exception {
