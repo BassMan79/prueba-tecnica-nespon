@@ -4,7 +4,7 @@
 
 **Tecnologias utilizadas:**
 * JDK 17
-* Selenium WebDriver v4.9.0
+* Selenium WebDriver v4.11.0
 * Cucumber v7.8.0
 * Building Tool: Maven
 * IDE: IntelliJ
